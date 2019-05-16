@@ -3054,12 +3054,18 @@ interface MediaDeviceInfo {
             <dt><dfn><code>deviceId</code></dfn> of type <span class=
             "idlAttrType"><a>DOMString</a></span>, readonly</dt>
             <dd>
-              <p>A unique identifier for the represented device.</p>
-              <p>All enumerable devices have an identifier that MUST be unique
-              to the page's origin. This identifier MUST be un-guessable by
-              applications of other origins to prevent the identifier from
-              being used to correlate the same user across different
-              origins.</p>
+              <p>The identifier of the represented device. The device MUST be
+              uniquely identified by its identifier and its <code><a
+              href="#def-mediadeviceinfo-kind">kind</a></code>.</p>
+              <p>The identifier SHOULD be unique to the browsing context
+              origin. If the identifier can uniquely identify the user, as is
+              usually the case with UUID, it MUST be un-guessable by browsing
+              contexts of other origins to prevent the identifier from being
+              used to correlate the same user across different origins.
+              An identifier can be used across origins as long as it is not
+              tied to the user and can be inferred by other means, like the
+              User-Agent string. This can for instance be used to represent
+              default devices with values such as "default" or "".</p>
               <p>If any local devices have been attached to a live
               MediaStreamTrack in a page from this origin, or <a href=
               "#stored-permissions">stored permission</a> to access local
@@ -3086,10 +3092,11 @@ interface MediaDeviceInfo {
               user agents MUST reset per-origin device identifiers when other
               persistent storage are cleared.</p>
             </dd>
-            <dt><dfn><code>kind</code></dfn> of type <span class=
-            "idlAttrType"><a>MediaDeviceKind</a></span>, readonly</dt>
+            <dt id="def-mediadeviceinfo-kind"><dfn><code>kind</code></dfn> of
+            type <span class= "idlAttrType"><a>MediaDeviceKind</a></span>,
+            readonly</dt>
             <dd>
-              <p>Describes the kind of the represented device.</p>
+              <p>The kind of the represented device.</p>
             </dd>
             <dt><dfn><code>label</code></dfn> of type <span class=
             "idlAttrType"><a>DOMString</a></span>, readonly</dt>
