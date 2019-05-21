@@ -4147,8 +4147,8 @@ const constraints = {
                 <li>Each <a data-lt="constraints">constraint</a> specifies one
                 or more values (or a range of values) for its property. A
                 property MAY appear more than once in the list of 'advanced'
-                ConstraintSets. If an empty list has been given as the value
-                for a constraint, it MUST be interpreted as if the constraint
+                ConstraintSets. If the value for a constraint is an empty list
+                or a string of length 0, it MUST be interpreted as if the constraint
                 were not specified (in other words, an empty constraint == no
                 constraint).
                   <p>Note that unknown properties are discarded by WebIDL,
