@@ -1993,7 +1993,7 @@ interface MediaStreamTrackEvent : Event {
     Similarly, sources of a {{RTCPeerConnection}} object are bound
     to the {{RTCPeerConnection}} itself, which is bound to its creation context.
     Except stated explicitly in the definition of specific sources,
-    a source is always <a href="#source-stopped">stopped</a> when its creation context goes away.
+    a source is always [= source/stopped =] when its creation context goes away.
     It should be noted that two sources, for instance of different contexts may use the same capture
     device at the same time. Stopping one of the source is independent of stopping the other one.
     </p>
