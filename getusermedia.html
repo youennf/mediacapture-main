@@ -595,7 +595,7 @@ interface MediaStream : EventTarget {
       initialized to <code>true</code>. When a browsing context, <var>context</var>, goes away, the User Agent MUST run the following steps:
       <ol>
         <li>
-          <p>Let <var>globalObject</var> be <var>context</var>'s <a data-cite="!HTML/#concept-relevant-global">relevant global object</a>.</p>
+          <p>Let <var>globalObject</var> be <var>context</var>'s [=relevant global object=].</p>
         </li>
         <li>
           <p>For each {{MediaStreamTrack}} object <var>track</var> whose [=relevant global object=] is <var>globalObject</var>, run the following steps:
