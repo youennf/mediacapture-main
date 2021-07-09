@@ -601,7 +601,7 @@ interface MediaStream : EventTarget {
           <p>For each {{MediaStreamTrack}} object <var>track</var> whose <a data-cite="!HTML/#concept-relevant-global">relevant global object</a> is <var>globalObject</var>, run the following steps:
             <ol>
               <li><p>Set <var>track</var>.{{MediaStreamTrack/readyState}} to {{MediaStreamTrackState/"ended"}}.</p></li>
-              <li><p>If <var>track</track>.<a>[[\shouldStopSource]]</a> is <code>true</code>, <a href="#source-stopped">stop</a> <var>track</var>'s underlying source.</p></li>
+              <li><p>If <var>track</track>.{{MediaStreamTrack/[[shouldStopSource]]}} is <code>true</code>, <a href="#source-stopped">stop</a> <var>track</var>'s underlying source.</p></li>
             </ol>
         </li>
       </ol>
